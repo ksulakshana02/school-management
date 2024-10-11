@@ -3,6 +3,8 @@ import BigCalendar from "@/components/BigCalendar";
 import Announcement from "@/components/Announcement";
 import Link from "next/link";
 import Performance from "@/components/Performance";
+import FormModal from "@/components/FormModal";
+import {role} from "@/lib/data";
 
 const SingleTeacherPage = () => {
     return (
@@ -22,7 +24,27 @@ const SingleTeacherPage = () => {
                                 className="w-36 h-36 rounded-full object-cover"/>
                         </div>
                         <div className="w-2/3 flex flex-col justify-between gap-4">
-                            <h1 className="text-xl font-semibold">kamla perera</h1>
+                            <div className="flex items-center gap-4">
+                                <h1 className="text-xl font-semibold">kamla perera</h1>
+                                {role === "admin" && <FormModal
+                                    table="teacher"
+                                    type="update"
+                                    data={{
+                                        id: 1,
+                                        username: "deanguerrero",
+                                        email: "deanguerrero@gmail.com",
+                                        password: "password",
+                                        firstName: "Dean",
+                                        lastName: "Guerrero",
+                                        phone: "+1 234 567 89",
+                                        address: "1234 Main St, Anytown, USA",
+                                        bloodType: "A+",
+                                        birthday: "2000-01-01",
+                                        sex: "male",
+                                        img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                                    }}
+                                />}
+                            </div>
                             <p className="text-sm tetx-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <div className="flex items-center justify-between gap-2 flex-wrap text-xs font-medium">
                                 <div className="w-full md:w-1/3 lg:w-full 2xl:w-1/3 flex items-center gap-2">
