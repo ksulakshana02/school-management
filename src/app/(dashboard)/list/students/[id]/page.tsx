@@ -113,10 +113,11 @@ const SingleStudentPage = () => {
                     <h1 className="text-xl font-semibold">Shortcuts</h1>
                     <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
                         <Link href="/public" className="p-3 rounded-md bg-cusSkyLight">Student&apos;s Classes</Link>
-                        <Link href="/public" className="p-3 rounded-md bg-cusPurpleLight">Student&apos;s Teachers</Link>
-                        <Link href="/public" className="p-3 rounded-md bg-cusYellowLight">Student&apos;s Lessons</Link>
-                        <Link href="/public" className="p-3 rounded-md bg-pink-50">Student&apos;s Exams</Link>
-                        <Link href="/public" className="p-3 rounded-md bg-cusSkyLight">Student&apos;s Assignments</Link>
+                        <Link href={`/list/teachers?classId=${2}`} className="p-3 rounded-md bg-cusPurpleLight">Student&apos;s Teachers</Link>
+                        <Link href={`/list/lessons?classId=${2}`} className="p-3 rounded-md bg-cusYellowLight">Student&apos;s Lessons</Link>
+                        <Link href={`/list/exams?classId=${2}`} className="p-3 rounded-md bg-pink-50">Student&apos;s Exams</Link>
+                        <Link href={`/list/assignments?classId=${2}`} className="p-3 rounded-md bg-cusSkyLight">Student&apos;s Assignments</Link>
+                        <Link href={`/list/results?studentId=${"student2"}`} className="p-3 rounded-md bg-cusYellowLight">Student&apos;s Results</Link>
                     </div>
                 </div>
                 <Performance/>
